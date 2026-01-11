@@ -4,6 +4,7 @@ dotenv.config();
 import express from "express";
 import { connectDb, initializeDb } from "./config/db.js";
 import SignUpRouter from './routes/auth.routes.js'
+import loginRouter from './routes/auth.routes.js'
 const app = express();
 
 app.use(express.json());
@@ -12,6 +13,7 @@ await connectDb();
 await initializeDb();
 
 app.use("/api/auth",SignUpRouter);
+app.use("/api/auth",loginRouter);
 
 app.listen(5000, () => {
     console.log(`Server is running on PORT 5000`);
