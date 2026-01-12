@@ -19,10 +19,10 @@ await initializeDb();
 
 app.use("/api/auth",SignUpRouter);
 app.use("/api/auth",loginRouter);
-app.use("/api/booking",createBookingRouter);
-app.use("/api/booking",getBookingRouter);
-app.use("/api/booking",updateBookingRouter);
-app.use("/api/booking",deleteBookingRouter);
+app.use("/api/bookings",createBookingRouter);
+app.use("/api/bookings",getBookingRouter);
+app.use("/api/bookings",updateBookingRouter);
+app.use("/api/bookings",deleteBookingRouter);
 
 
 app.listen(5000, () => {
